@@ -1,6 +1,4 @@
-/* ==========================================================================
-   RESET Y VARIABLES DE DISEÑO
-   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +6,12 @@
 }
 
 :root {
-    --primary-red: #8B0000;       /* Rojo Carmesí Colonial */
-    --accent-gold: #FFD700;       /* Dorado brillante */
+    --primary-red: #8B0000;       
+    --accent-gold: #FFD700;       
     --gold-dark: #C59B27;
     --dark-bg: #141414;
     --card-bg: #FFFFFF;
-    --body-bg: #F5F2EB;           /* Fondo apergaminado claro */
+    --body-bg: #F5F2EB;           
     --text-dark: #2B2B2B;
     --text-muted: #666666;
     --border-radius: 14px;
@@ -34,9 +32,7 @@ html {
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   ENCABEZADO (HERO CON IMAGEN SUPERIOR)
-   ========================================================================== */
+
 .header {
     position: relative;
     background-color: #2a0808;
@@ -126,9 +122,7 @@ html {
     border-radius: 2px;
 }
 
-/* ==========================================================================
-   NAVEGACIÓN ESTILO PESTAÑAS FLOTANTES
-   ========================================================================== */
+
 .navbar {
     background-color: var(--dark-bg);
     position: sticky;
@@ -163,9 +157,7 @@ html {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   SECCIONES Y TARJETAS
-   ========================================================================== */
+
 .content {
     margin-top: 40px;
     margin-bottom: 50px;
@@ -226,9 +218,7 @@ html {
     margin-bottom: 10px;
 }
 
-/* ==========================================================================
-   GALERÍA DE IMÁGENES
-   ========================================================================== */
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -268,9 +258,7 @@ html {
     font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   DATOS CURIOSOS
-   ========================================================================== */
+
 .curiosities-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -308,9 +296,7 @@ html {
     color: #444444;
 }
 
-/* ==========================================================================
-   ELEMENTOS CULTURALES
-   ========================================================================== */
+
 .elements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -348,9 +334,7 @@ html {
     color: #444444;
 }
 
-/* ==========================================================================
-   VIDEOS DE YOUTUBE
-   ========================================================================== */
+
 .video-large {
     width: 100%;
     max-width: 950px;
@@ -400,9 +384,7 @@ html {
     box-shadow: 0 6px 18px rgba(255, 0, 0, 0.4);
 }
 
-/* ==========================================================================
-   QUIZ INTERACTIVO RESPONSIVO Y OPTIMIZADO (PURO CSS)
-   ========================================================================== */
+
 .quiz-container {
     display: grid;
     /* En teléfonos se verá en 1 columna, en PC en 2 columnas (ver Media Query abajo) */
@@ -427,12 +409,12 @@ html {
     line-height: 1.4;
 }
 
-/* 🛑 REGLA CLAVE PARA OCULTAR LAS BOLITAS DE RADIO ORIGINALES */
+
 .quiz-box input[type="radio"] {
     display: none !important;
 }
 
-/* Estilo de los botones interactivos */
+
 .quiz-btn {
     display: inline-block;
     background-color: #FFFFFF;
@@ -452,14 +434,14 @@ html {
     background-color: #fcebeb;
 }
 
-/* Estilo al seleccionar una respuesta */
+
 .quiz-box input[type="radio"]:checked + .quiz-btn {
     background-color: var(--primary-red);
     color: #FFFFFF;
     border-color: var(--primary-red);
 }
 
-/* 🛑 OCULTAR LOS MENSAJES DE RESPUESTA POR DEFECTO */
+
 .quiz-box .feedback {
     display: none;
     margin-top: 15px;
@@ -481,7 +463,7 @@ html {
     border-left: 4px solid #F44336;
 }
 
-/* LÓGICA CSS SIMPLIFICADA: MOSTRAR MENSAJE SOLO CUANDO SE HACE CLIC */
+
 .quiz-box input.wrong-answer:checked ~ .msg-wrong {
     display: block !important;
 }
@@ -490,12 +472,12 @@ html {
     display: block !important;
 }
 
-/* 🧠 LÓGICA MATEMÁTICA: SUMAR PUNTOS AL ACIERTO (SOPORTE MODERNO) */
+
 .quiz-box:has(input.correct-answer:checked) {
     counter-increment: aciertos;
 }
 
-/* DISEÑO DEL MARCADOR DE PUNTOS */
+
 .quiz-score {
     background: linear-gradient(135deg, #FFD700, #C59B27);
     color: #141414;
@@ -513,7 +495,7 @@ html {
     color: #8B0000;
 }
 
-/* INYECTAR EL NÚMERO DE PUNTOS DINÁMICAMENTE */
+
 .quiz-score::after {
     content: counter(aciertos) " de 8 aciertos";
     display: block;
@@ -523,7 +505,7 @@ html {
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
 
-/* Botón de Reinicio */
+
 .quiz-reset-container {
     text-align: center;
     margin-top: 25px;
@@ -548,9 +530,7 @@ html {
     background: linear-gradient(135deg, #555555, #333333);
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
+
 .footer {
     background-color: var(--dark-bg);
     color: #ffffff;
@@ -560,17 +540,15 @@ html {
     font-size: 0.95rem;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (TELÉFONOS Y COMPUTADORAS)
-   ========================================================================== */
-/* Regla exclusiva para Computadoras/Pantallas Anchas */
+
+
 @media (min-width: 768px) {
     .quiz-container {
-        grid-template-columns: 1fr 1fr; /* Dividir el Quiz en 2 columnas */
+        grid-template-columns: 1fr 1fr; 
     }
 }
 
-/* Reglas para Teléfonos Móviles */
+
 @media (max-width: 767px) {
     .main-title {
         font-size: 2.2rem;
